@@ -1,0 +1,21 @@
+# Private: never commit
+config.json
+.telegram-token
+.proxy*.json
+.webshare*.json
+.apple-*
+*.candidate.txt*
+.session-*.json
+.http-verification-diagnostic.json
+.tls-diagnostic.json
+.monitor.lock
+.write-*
+
+# Runtime output
+state.json
+status.json
+*.log
+
+# Build and dependencies
+/iphone-monitor
+node_modules/

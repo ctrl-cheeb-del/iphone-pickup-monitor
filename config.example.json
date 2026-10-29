@@ -1,0 +1,18 @@
+{
+  "country": "uk",
+  "label": "Manchester",
+  "postcode": "M1 3AX",
+  "stores": [
+    "Manchester Arndale",
+    "Trafford Centre"
+  ],
+  "products": {
+    "MK2D4QN/A": "iPhone Duo 256GB Star White",
+    "MK2E4QN/A": "iPhone Duo 256GB Night Sky"
+  },
+  "interval_seconds": 5,
+  "telegram_chat_id": 123456789,
+  "stock_endpoint": "retail",
+  "renewal_mode": "http",
+  "retail_proxy_file": ".proxy.json"
+}

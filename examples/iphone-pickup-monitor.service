@@ -1,0 +1,21 @@
+# User service: copy to ~/.config/systemd/user/, adjust paths, then
+#   systemctl --user daemon-reload
+#   systemctl --user enable --now iphone-pickup-monitor.service
+#   loginctl enable-linger "$USER"   # keep running after logout
+[Unit]
+Description=iPhone pickup stock monitor
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/iphone-pickup-monitor
+ExecStart=%h/iphone-pickup-monitor/iphone-monitor -root %h/iphone-pickup-monitor
+Restart=always
+RestartSec=30
+TimeoutStopSec=20
+UMask=0077
+StandardOutput=append:%h/iphone-pickup-monitor/monitor.log
+StandardError=append:%h/iphone-pickup-monitor/monitor-error.log
+
+[Install]
+WantedBy=default.target
